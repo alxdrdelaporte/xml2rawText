@@ -24,6 +24,8 @@ with open(input_path, "r", encoding="utf-8") as data:
     print(" ".join([child.text for child in root.iter()]))
     print("Descendants 'w' uniquement :\n")
     print(" ".join([child.text for child in root.iter("w")]))
+
+with open(input_path, "r", encoding="utf-8") as data:
     # Parsing XML avec bs4.BeautifulSoup
     print("***Extraction du texte avec bs4.BeautifulSoup***\n")
     ma_soupe = soup(data, "lxml")
